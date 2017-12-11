@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def raw_function(x):
     return np.sin(2 * np.pi * x)
 
