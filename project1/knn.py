@@ -18,7 +18,7 @@ class KNN:
         self.data_fold = np.array_split(data_now, num)
         self.label_fold = np.array_split(label_now, num)
 
-    def run_knn(self, k=1, normalization = False):
+    def run_knn(self, k=1, normalization = False, pca=0):
         true_count = 0
         for i in range(self.fold_num):
             val_data = self.data_fold[i]
@@ -35,6 +35,14 @@ class KNN:
                 tmp_max = np.max(train_data, axis=0)
                 train_data = train_data / tmp_max
                 val_data = val_data / tmp_max
+            if pca != 0:
+                tmp_mean = np.mean(train_data, axis=0)
+                train_data = train_data - tmp_mean
+                val_data = val_data - tmp_mean
+                eigVals, eigVects = np.linalg.eig(np.cov(train_data, rowvar=0))
+                eigVects = eigVects[:, np.argsort(-eigVals)[:pca]]
+                train_data = np.dot(train_data, eigVects)
+                val_data = np.dot(val_data, eigVects)
             distance = self.get_distance(val_data, train_data)
             index = np.argsort(distance)
             for i in range(index.shape[0]):
