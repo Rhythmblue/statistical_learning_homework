@@ -1,0 +1,96 @@
+movie_feature
+fold: 0, train_time: 78.16, test_time: 8.43, gender_error_rate: 0.2086
+fold: 1, train_time: 78.21, test_time: 8.40, gender_error_rate: 0.1854
+fold: 2, train_time: 78.73, test_time: 8.43, gender_error_rate: 0.1887
+fold: 3, train_time: 78.10, test_time: 8.27, gender_error_rate: 0.2202
+fold: 4, train_time: 79.33, test_time: 8.43, gender_error_rate: 0.2036
+fold: 5, train_time: 78.24, test_time: 8.33, gender_error_rate: 0.2070
+fold: 6, train_time: 78.41, test_time: 8.33, gender_error_rate: 0.2136
+fold: 7, train_time: 78.99, test_time: 8.44, gender_error_rate: 0.1887
+fold: 8, train_time: 78.74, test_time: 8.40, gender_error_rate: 0.1954
+fold: 9, train_time: 77.96, test_time: 8.27, gender_error_rate: 0.2136
+avg_error: 0.2025
+genre_feature
+fold: 0, train_time: 0.95, test_time: 0.05, gender_error_rate: 0.2632
+fold: 1, train_time: 0.95, test_time: 0.05, gender_error_rate: 0.2765
+fold: 2, train_time: 0.97, test_time: 0.05, gender_error_rate: 0.2599
+fold: 3, train_time: 0.94, test_time: 0.05, gender_error_rate: 0.3046
+fold: 4, train_time: 0.94, test_time: 0.05, gender_error_rate: 0.2599
+fold: 5, train_time: 0.95, test_time: 0.05, gender_error_rate: 0.2798
+fold: 6, train_time: 0.94, test_time: 0.06, gender_error_rate: 0.2748
+fold: 7, train_time: 0.95, test_time: 0.05, gender_error_rate: 0.2599
+fold: 8, train_time: 0.95, test_time: 0.05, gender_error_rate: 0.2815
+fold: 9, train_time: 0.95, test_time: 0.06, gender_error_rate: 0.2798
+avg_error: 0.2740
+genre_mask_feature
+fold: 0, train_time: 1.65, test_time: 0.14, gender_error_rate: 0.2748
+fold: 1, train_time: 1.64, test_time: 0.14, gender_error_rate: 0.2715
+fold: 2, train_time: 1.66, test_time: 0.14, gender_error_rate: 0.2682
+fold: 3, train_time: 1.61, test_time: 0.14, gender_error_rate: 0.3146
+fold: 4, train_time: 1.65, test_time: 0.15, gender_error_rate: 0.2715
+fold: 5, train_time: 1.65, test_time: 0.14, gender_error_rate: 0.2815
+fold: 6, train_time: 1.68, test_time: 0.14, gender_error_rate: 0.2897
+fold: 7, train_time: 1.63, test_time: 0.14, gender_error_rate: 0.2732
+fold: 8, train_time: 1.64, test_time: 0.14, gender_error_rate: 0.2881
+fold: 9, train_time: 1.63, test_time: 0.14, gender_error_rate: 0.2798
+avg_error: 0.2813
+movie_feature+genre_feature
+fold: 0, train_time: 77.78, test_time: 8.42, gender_error_rate: 0.1987
+fold: 1, train_time: 77.81, test_time: 8.35, gender_error_rate: 0.1788
+fold: 2, train_time: 78.38, test_time: 8.36, gender_error_rate: 0.1954
+fold: 3, train_time: 77.69, test_time: 8.29, gender_error_rate: 0.2152
+fold: 4, train_time: 78.59, test_time: 8.37, gender_error_rate: 0.1904
+fold: 5, train_time: 77.70, test_time: 8.26, gender_error_rate: 0.2070
+fold: 6, train_time: 77.88, test_time: 8.38, gender_error_rate: 0.2036
+fold: 7, train_time: 78.28, test_time: 8.44, gender_error_rate: 0.1887
+fold: 8, train_time: 78.63, test_time: 8.38, gender_error_rate: 0.2020
+fold: 9, train_time: 78.37, test_time: 8.41, gender_error_rate: 0.2103
+avg_error: 0.1990
+movie_feature
+fold: 0, train_time: 172.40, test_time: 13.91, age_error_rate: 0.5430
+fold: 1, train_time: 172.20, test_time: 13.89, age_error_rate: 0.5166
+fold: 2, train_time: 170.80, test_time: 13.72, age_error_rate: 0.5281
+fold: 3, train_time: 170.05, test_time: 13.81, age_error_rate: 0.5248
+fold: 4, train_time: 171.83, test_time: 13.84, age_error_rate: 0.5381
+fold: 5, train_time: 171.34, test_time: 13.79, age_error_rate: 0.5315
+fold: 6, train_time: 170.77, test_time: 13.78, age_error_rate: 0.5381
+fold: 7, train_time: 171.58, test_time: 13.84, age_error_rate: 0.5166
+fold: 8, train_time: 172.57, test_time: 14.02, age_error_rate: 0.4884
+fold: 9, train_time: 172.05, test_time: 13.89, age_error_rate: 0.5613
+avg_error: 0.5286
+genre_feature
+fold: 0, train_time: 1.86, test_time: 0.09, age_error_rate: 0.6656
+fold: 1, train_time: 1.86, test_time: 0.10, age_error_rate: 0.6639
+fold: 2, train_time: 1.87, test_time: 0.10, age_error_rate: 0.6490
+fold: 3, train_time: 1.92, test_time: 0.09, age_error_rate: 0.6474
+fold: 4, train_time: 1.86, test_time: 0.10, age_error_rate: 0.6540
+fold: 5, train_time: 1.89, test_time: 0.10, age_error_rate: 0.6540
+fold: 6, train_time: 1.84, test_time: 0.10, age_error_rate: 0.7086
+fold: 7, train_time: 1.90, test_time: 0.10, age_error_rate: 0.6325
+fold: 8, train_time: 1.89, test_time: 0.09, age_error_rate: 0.6507
+fold: 9, train_time: 1.89, test_time: 0.10, age_error_rate: 0.6755
+avg_error: 0.6601
+genre_mask_feature
+fold: 0, train_time: 3.54, test_time: 0.17, age_error_rate: 0.6540
+fold: 1, train_time: 3.60, test_time: 0.16, age_error_rate: 0.6589
+fold: 2, train_time: 3.57, test_time: 0.17, age_error_rate: 0.6474
+fold: 3, train_time: 3.57, test_time: 0.17, age_error_rate: 0.6424
+fold: 4, train_time: 3.59, test_time: 0.17, age_error_rate: 0.6523
+fold: 5, train_time: 3.59, test_time: 0.16, age_error_rate: 0.6374
+fold: 6, train_time: 3.55, test_time: 0.17, age_error_rate: 0.6937
+fold: 7, train_time: 3.58, test_time: 0.17, age_error_rate: 0.6275
+fold: 8, train_time: 3.55, test_time: 0.17, age_error_rate: 0.6424
+fold: 9, train_time: 3.55, test_time: 0.18, age_error_rate: 0.6738
+avg_error: 0.6530
+movie_feature+genre_feature
+fold: 0, train_time: 171.82, test_time: 13.93, age_error_rate: 0.5430
+fold: 1, train_time: 171.62, test_time: 13.88, age_error_rate: 0.5199
+fold: 2, train_time: 171.83, test_time: 13.98, age_error_rate: 0.5182
+fold: 3, train_time: 171.97, test_time: 14.01, age_error_rate: 0.5331
+fold: 4, train_time: 173.02, test_time: 13.88, age_error_rate: 0.5397
+fold: 5, train_time: 172.83, test_time: 13.78, age_error_rate: 0.5348
+fold: 6, train_time: 173.12, test_time: 13.87, age_error_rate: 0.5331
+fold: 7, train_time: 173.21, test_time: 13.96, age_error_rate: 0.5182
+fold: 8, train_time: 172.81, test_time: 14.00, age_error_rate: 0.4851
+fold: 9, train_time: 171.60, test_time: 13.81, age_error_rate: 0.5530
+avg_error: 0.5278

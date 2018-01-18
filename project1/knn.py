@@ -1,6 +1,5 @@
 import numpy as np
 
-
 class KNN:
     def __init__(self, data, label):
         self.data = data
@@ -11,6 +10,7 @@ class KNN:
 
     def split_data(self, num):
         self.fold_num = num
+        np.random.seed(1)
         perm = np.arange(self.data.shape[0])
         np.random.shuffle(perm)
         data_now = self.data[perm]
@@ -18,7 +18,7 @@ class KNN:
         self.data_fold = np.array_split(data_now, num)
         self.label_fold = np.array_split(label_now, num)
 
-    def run_knn(self, k=1, normalization = False, pca=0):
+    def run_knn(self, k=1, normalization = False, pca=0, norm=2):
         true_count = 0
         for i in range(self.fold_num):
             val_data = self.data_fold[i]
@@ -39,11 +39,14 @@ class KNN:
                 tmp_mean = np.mean(train_data, axis=0)
                 train_data = train_data - tmp_mean
                 val_data = val_data - tmp_mean
-                eigVals, eigVects = np.linalg.eig(np.cov(train_data, rowvar=0))
+                eigVals, eigVects = np.linalg.eig(np.cov(train_data, rowvar=False))
                 eigVects = eigVects[:, np.argsort(-eigVals)[:pca]]
                 train_data = np.dot(train_data, eigVects)
                 val_data = np.dot(val_data, eigVects)
-            distance = self.get_distance(val_data, train_data)
+            if norm==2:
+                distance = self.get_distance(val_data, train_data)
+            elif norm==1:
+                distance = self.get_1_norm_distance(val_data, train_data)
             index = np.argsort(distance)
             for i in range(index.shape[0]):
                 count = np.zeros(4)
@@ -60,4 +63,12 @@ class KNN:
         a_sq = np.tile(np.sum(np.square(a), 1), (b_num, 1)).T
         b_sq = np.tile(np.sum(np.square(b), 1), (a_num, 1))
         result = a_sq + b_sq - 2 * np.dot(a, b.T)
+        return result
+
+    @staticmethod
+    def get_1_norm_distance(a, b):
+        result = np.zeros([a.shape[0], b.shape[0]])
+        for i in range(a.shape[0]):
+            for j in range(b.shape[0]):
+                result[i, j] = np.sum(np.abs(a[i]-b[j]))
         return result

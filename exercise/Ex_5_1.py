@@ -16,7 +16,6 @@ def perceptron_origin(x, y, w, rate):
         print('can\'t find proper w' )
     return w
 
-
 def perceptron_dual(x, y, rate):
     num, dim = x.shape
     alpha = np.zeros([num, 1])
@@ -62,7 +61,7 @@ for i in range(x.shape[0]):
     color = 'r' if y[i]==1 else 'b'
     plt.plot(x[i][1], x[i][2], '.' + color)
 x_range = np.array([0, 5])
-y_range = - (w1[1]/w1[2])*x_range - w1[0]/w[2]
+y_range = - (w1[1]/w1[2])*x_range - w1[0]/w1[2]
 
 plt.plot(x_range, y_range)
 plt.xlabel('x1')

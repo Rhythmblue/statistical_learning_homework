@@ -11,7 +11,7 @@ class Retrieval:
         self.sample_num = self.features.shape[0]
 
     def preprocess(self):
-        self.features = self.features / np.sqrt(np.sum(np.square(self.features), axis=1))
+        self.features = (self.features.T / np.sqrt(np.sum(np.square(self.features), axis=1))).T
 
     def cal_distance(self):
         distance = self.get_distance(self.features, self.features)

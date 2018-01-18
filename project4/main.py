@@ -1,6 +1,6 @@
 import time
 import numpy as np
-from  matplotlib import pyplot as plt
+from matplotlib import pyplot as plt
 from img_retrieval import Retrieval
 
 
@@ -8,6 +8,7 @@ features = np.load('./data/features.npy')
 labels = np.load('./data/labels.npy')
 start = time.time()
 library = Retrieval(features, labels, clutter=12)
+library.preprocess()
 library.cal_distance()
 avg_time = (time.time()-start)/features.shape[0]
 k = list(range(1, 101))
