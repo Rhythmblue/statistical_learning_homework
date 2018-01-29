@@ -2,7 +2,7 @@
 
 This is all the code for class [Statistical Learning] in USTC.
 
-[statistic learning]:http://staff.ustc.edu.cn/~dongeliu/statlearn.html
+[Statistical Learning]:http://staff.ustc.edu.cn/~dongeliu/statlearn.html
 
 ## Environment
 * Language: python3
